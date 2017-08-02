@@ -9,5 +9,5 @@ Python LeetCode Exercise Note
 
 |Sequence| Problem     |Answer |level  |
 | -------|:---------:| :-----:|------:|
-| 1 | [Python/LeetCode#1.Two Sum.python](https://github.com/jaspercheng/python/blob/master/leetcode/1.Two%20Sum) | [two sum]()|Easy |
+| 1 | [Python/LeetCode#1.Two Sum.python](https://github.com/jaspercheng/python/blob/master/leetcode/1.Two%20Sum) | [two sum](https://github.com/jaspercheng/python/blob/master/leetcode/1.two%20sum%20answer)|Easy |
 
