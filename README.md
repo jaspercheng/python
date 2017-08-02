@@ -7,7 +7,7 @@ Python LeetCode Exercise Note
 
 
 
-|Sequence| Problem     |level  |
+|Question link| Problem  solution    |level  |
 | -------|:---------:|------:|
-| [1](https://leetcode.com/problems/two-sum/description/) | [Python/LeetCode#1.Two Sum.python](https://github.com/jaspercheng/python/blob/master/leetcode/1.Two%20Sum) | |Easy |
+| [1](https://leetcode.com/problems/two-sum/description/) | [Python/LeetCode#1.Two Sum.python](https://github.com/jaspercheng/python/blob/master/leetcode/1.Two%20Sum) | Easy |
 
