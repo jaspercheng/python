@@ -1,5 +1,5 @@
-'''
-题目来源：https://leetcode.com/problems/two-sum/
+
+[题目来源]（https://leetcode.com/problems/two-sum/)
 
 Description:
 
@@ -28,11 +28,10 @@ return [0, 1].
      接下来我来介绍最后一种方法。在python里面有一个dictionary的和C++ 的map功能一样。
      首先，我们建立一个字典，d = {}，字典的key是数组的值num，value是相应的位置， 
      然后只要满足 num 和 target - num都在字典里面则找到答案。这种方法的时间复杂度是（O（n））。
+
+
 代码（python）：
-'''
 
-
-```
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -50,7 +49,7 @@ class Solution(object):
                     ans = [d[target - nums[size]] , size + 1]# for example [0,1,2] 0 and [0,1,2,0],0
                     return ans
             size = size + 1
- ```           
+       
             
             
        
