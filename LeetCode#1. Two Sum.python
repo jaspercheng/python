@@ -1,0 +1,54 @@
+'''
+题目来源：https://leetcode.com/problems/two-sum/
+
+Description:
+
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
+题意分析：
+      这道题目是输入一个数组和target，要在一个数组中找到两个数字，其和为target，从小到大输出数组中两个数字的位置。
+      题目中假设有且仅有一个答案。
+
+题目思路：
+     如果直接暴力解决，时间复杂度为（O（n^2）），很明显这种方法会TLE。
+
+     那么如果给定的数组是有序的会不会降低难度呢？如果是有序的数组，那么我们可以用“夹逼定理”来处理。
+     简单来说就是首尾相加，如果比target大，则将尾数左移，如果小了首尾右移，直到两个数相加刚好等于target，
+     那么我们可以先将数组排序，然后用“夹逼定理”，这种方法的时间复杂度为（O（nlogn）。
+     这种方法要注意的是排序的时候要记录数组原来的位置，然后再排序。
+
+     接下来我来介绍最后一种方法。在python里面有一个dictionary的和C++ 的map功能一样。
+     首先，我们建立一个字典，d = {}，字典的key是数组的值num，value是相应的位置， 
+     然后只要满足 num 和 target - num都在字典里面则找到答案。这种方法的时间复杂度是（O（n））。
+代码（python）：
+'''
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        d = {}# d is a dictionary to map the value of nums and the index in nums
+        size = 0
+        while size < len(nums):
+            if not nums[size] in d:
+                d[nums[size]] = size + 1 #if nums[size] doesn't exist in d ,create it
+            if target - nums[size] in d: #if nums[size] and target - nums[size] are both in d
+                if d[target-nums[size]] < size + 1: # one situation should be minded nums[size] == target - nums[size]
+                    ans = [d[target - nums[size]] , size + 1]# for example [0,1,2] 0 and [0,1,2,0],0
+                    return ans
+            size = size + 1
+            
+            
+            
+       
