@@ -31,6 +31,8 @@ return [0, 1].
 代码（python）：
 '''
 
+
+```
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -48,7 +50,7 @@ class Solution(object):
                     ans = [d[target - nums[size]] , size + 1]# for example [0,1,2] 0 and [0,1,2,0],0
                     return ans
             size = size + 1
-            
+ ```           
             
             
        
