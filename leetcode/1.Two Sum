@@ -1,7 +1,7 @@
 Python LeetCode#1. Two Sum
 题目链接：https://leetcode.com/problems/two-sum/description/
 
-题目：
+题目：1. Two Sum
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -19,8 +19,67 @@ return [0, 1].
 
 
 题目思路：
-    在python里有字典dict，建立一个字典，d = {key:value}，字典的value是数组的值num，key是相应的位置， 然后只要满足 num 和 target - num都在字典里面则找到答案。这种方法的时间复杂度是（O（n））。
+    在python里有字典dict，建立一个字典，d = {key:value}，字典的key是数组的值num，value是相应的位置， 然后只要满足 num 和 target - num都在字典里面则找到答案。这种方法的时间复杂度是（O（n））。
 
 测试
 Input:[3,2,4] 6
 Expected:  [1,2]
+
+
+#----------python code  solution 1-------------
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """       
+        dict = {}
+        for i in range(len(nums)):
+            expected = target - nums[i]
+            # print i, expected, dict
+            if expected in dict.keys():
+                return [dict[expected], i]
+            dict[nums[i]] = i
+
+if __name__ == "__main__":
+    
+    sol= Solution()
+    
+    nums = [3, 2, 4]
+    print (sol.twoSum(nums, 6))
+
+    nums = [2, 11, 7, 15]
+    print (sol.twoSum(nums, 9))
+
+    nums = [3, 6, 8, 9, 10, 21, 12]
+    print (sol.twoSum(nums, 18))
+#----------python code  solution 2-------------
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        d = {}
+        for i in range(0,len(nums)):
+          if nums[i] in d:
+            return [d[nums[i]], i + 1]
+          else:
+            d[target - nums[i]] = i + 1
+
+if __name__ == "__main__":
+    
+    sol= Solution()
+    
+    nums = [3, 2, 4]
+    print (sol.twoSum(nums, 6))
+
+    nums = [2, 11, 7, 15]
+    print (sol.twoSum(nums, 9))
+
+    nums = [3, 6, 8, 9, 10, 21, 12]
+    print (sol.twoSum(nums, 18))
+#-----------------------
+
