@@ -1,7 +1,6 @@
-# python
 Python problems
 ====  
-Python Exercise record (练习题笔记)
+Exercise record (练习题笔记)
 
 
 [LeetCode All Problems Link(LeetCode 练习题链接)](https://leetcode.com/problemset/all/)
