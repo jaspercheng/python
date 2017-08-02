@@ -2,7 +2,7 @@ Python LeetCode Exercise Note
 ====  
 
 
-[LeetCode All Problems Link(LeetCode 练习题链接)](https://leetcode.com/problemset/all/)
+[LeetCode All Problems Link(LeetCode 所有练习题链接)](https://leetcode.com/problemset/all/)
 
 |sequence | problem          | level  |
 | --------------------- |:------------------------------:| -----:|
